@@ -1,0 +1,10 @@
+language: csharp
+services: postgresql
+
+sudo: required
+dist: trusty  
+
+solution: LibraryInfoSystem.sln
+
+install:
+- nuget restore ${TRAVIS_SOLUTION}

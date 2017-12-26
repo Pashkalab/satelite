@@ -1,0 +1,156 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Наташа (generated)" id="1513987782213-1">
+        <createTable tableName="author">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="author_pkey"/>
+            </column>
+            <column name="full_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="birth_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="death_date" type="date"/>
+            <column name="birth_place" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="death_place" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-2">
+        <createTable tableName="book">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_pkey"/>
+            </column>
+            <column name="title" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="publisher_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kind" type="BOOKKIND">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_count" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available_count" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="publish_year" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="department_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-3">
+        <createTable tableName="book_author">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_author_pkey"/>
+            </column>
+            <column name="book_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="author_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-4">
+        <createTable tableName="book_reader">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_reader_pkey"/>
+            </column>
+            <column name="book_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reader_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="CURRENT_DATE" name="taken" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="returned" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-5">
+        <createTable tableName="department">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="department_pkey"/>
+            </column>
+            <column name="discipline" type="DISCIPLINE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="hall_name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-6">
+        <createTable tableName="hall">
+            <column name="name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="read_place_count" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-7">
+        <createTable tableName="publisher">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="publisher_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(70)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="phone_number" type="VARCHAR(16)"/>
+            <column name="address" type="VARCHAR(90)"/>
+            <column name="website" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-8">
+        <createTable tableName="reader">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="reader_pkey"/>
+            </column>
+            <column name="full_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(90)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="phone_number" type="VARCHAR(16)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-9">
+        <addPrimaryKey columnNames="name" constraintName="hall_pkey" tableName="hall"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-10">
+        <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="book_author" constraintName="author_f" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="author"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-11">
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="book_reader" constraintName="book" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="book"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-12">
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="book_author" constraintName="book_f" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="book"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-13">
+        <addForeignKeyConstraint baseColumnNames="department_id" baseTableName="book" constraintName="department" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="department"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-14">
+        <addForeignKeyConstraint baseColumnNames="hall_name" baseTableName="department" constraintName="hall" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="name" referencedTableName="hall"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-15">
+        <addForeignKeyConstraint baseColumnNames="publisher_id" baseTableName="book" constraintName="publisher" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="publisher"/>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1513987782213-16">
+        <addForeignKeyConstraint baseColumnNames="reader_id" baseTableName="book_reader" constraintName="reader" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="reader"/>
+    </changeSet>
+</databaseChangeLog>

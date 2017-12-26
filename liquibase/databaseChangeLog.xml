@@ -1,0 +1,243 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Nata" id="1">
+        <createTable tableName="author">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="author_pkey"/>
+            </column>
+            <column name="full_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="birth_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="death_date" type="date"/>
+            <column name="birth_place" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="death_place" type="VARCHAR(50)"/>
+        </createTable>
+        <sql>
+    		ALTER TABLE author ADD CONSTRAINT validEmail CHECK (email ~ '^\S*@\S*\.\w*$'::text)
+		</sql>
+		<rollback>
+            <dropTable tableName="author"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="2">
+    	<sql>
+    		CREATE TYPE bookKind AS ENUM ('educational', 'methodical', 'auxiliary')
+    	</sql>
+        <createTable tableName="book">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_pkey"/>
+            </column>
+            <column name="title" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="publisher_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kind" type="BOOKKIND">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_count" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available_count" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="publish_year" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="department_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <sql>
+    		ALTER TABLE book ADD CONSTRAINT validYear CHECK (publish_year > 1450)
+		</sql>
+		<rollback>
+            <dropTable tableName="book"/>
+            <sql>DROP TYPE bookKind;</sql>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="3">
+        <createTable tableName="book_author">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_author_pkey"/>
+            </column>
+            <column name="book_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="author_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+		<rollback>
+            <dropTable tableName="book_author"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="4">
+        <createTable tableName="book_reader">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_reader_pkey"/>
+            </column>
+            <column name="book_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reader_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="CURRENT_DATE" name="taken" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="returned" type="date"/>
+        </createTable>
+		<rollback>
+            <dropTable tableName="book_reader"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="5">
+    	<sql>
+    		CREATE TYPE discipline AS ENUM ('math', 'IT', 'PT', 'languages', 'literature', 'history', 'geography', 'physics', 'chemistry', 'biology', 'health care', 'economics', 'art', 'music', 'speech and debate', 'phsychology', 'philosophy')
+    	</sql>
+        <createTable tableName="department">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="department_pkey"/>
+            </column>
+            <column name="discipline" type="DISCIPLINE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="hall_name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+		<rollback>
+            <dropTable tableName="department"/>
+            <sql>DROP TYPE discipline;</sql>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="6">
+        <createTable tableName="hall">
+            <column name="name" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="read_place_count" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Nata" id="7">
+        <createTable tableName="publisher">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="publisher_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(70)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="phone_number" type="VARCHAR(16)"/>
+            <column name="address" type="VARCHAR(90)"/>
+            <column name="website" type="TEXT"/>
+        </createTable>
+        <sql>
+            ALTER TABLE publisher ADD CONSTRAINT validEmail CHECK (email ~ '^\S*@\S*\.\w*$');
+    		ALTER TABLE publisher ADD CONSTRAINT validPhoneNumber CHECK (phone_number ~ '^(\+38)?0(\d{2}) \d{3}([- ])(\d{2}\3\d{2})$');
+    		ALTER TABLE publisher ADD CONSTRAINT validurl CHECK (website ~ '^(http:\/\/|https:\/\/|www.)?((((\S+\/)+\S)(\S*))|(\S*\/.\S*))$')
+		</sql>
+		<rollback>
+            <dropTable tableName="publisher"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="8">
+        <createTable tableName="reader">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="reader_pkey"/>
+            </column>
+            <column name="full_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(90)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)"/>
+            <column name="phone_number" type="VARCHAR(16)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <sql>
+            ALTER TABLE reader ADD CONSTRAINT validEmail CHECK (email ~ '^\S*@\S*\.\w*$');
+    		ALTER TABLE reader ADD CONSTRAINT validMobile CHECK (phone_number ~ '^(\+38)?0(\d{2}) \d{3}([- ])(\d{2}\3\d{2})$')
+		</sql>
+		<rollback>
+            <dropTable tableName="reader"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="9">
+        <addPrimaryKey columnNames="name" constraintName="hall_pkey" tableName="hall"/>        
+        <rollback>
+    		<dropPrimaryKey constraintName="hall_pkey" schemaName="public"
+            tableName="hall"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="10">
+        <addForeignKeyConstraint baseColumnNames="hall_name" baseTableName="department" constraintName="hall" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="name" referencedTableName="hall"/>
+        <rollback>
+ 			<dropAllForeignKeyConstraints baseTableName="department"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="11">
+        <addForeignKeyConstraint baseColumnNames="publisher_id" baseTableName="book" constraintName="publisher" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="publisher"/>        
+        <addForeignKeyConstraint baseColumnNames="department_id" baseTableName="book" constraintName="department" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="department"/>
+        <rollback>
+ 			<dropAllForeignKeyConstraints baseTableName="book"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="12">
+        <addForeignKeyConstraint baseColumnNames="reader_id" baseTableName="book_reader" constraintName="reader" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="reader"/>
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="book_reader" constraintName="book" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="book"/>
+        <rollback>
+ 			<dropAllForeignKeyConstraints baseTableName="book_reader"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="13">
+        <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="book_author" constraintName="author_f" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="author"/>
+        <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="book_author" constraintName="book_f" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="book"/>
+        <rollback>
+ 			<dropAllForeignKeyConstraints baseTableName="book_author"/>
+        </rollback>
+    </changeSet>
+    <changeSet author="Nata" id="14">
+		<createProcedure>
+			CREATE FUNCTION public.change_book_count()
+		    RETURNS trigger
+		    LANGUAGE 'plpgsql'
+			AS $BODY$
+		        BEGIN
+		            IF (TG_OP = 'UPDATE') THEN
+		                UPDATE book SET available_count = available_count + 1
+		                WHERE book.id = NEW.book_id;
+		            	RETURN NEW;
+		        	ELSIF (TG_OP = 'INSERT') THEN
+		                UPDATE book SET available_count = available_count - 1
+		                WHERE book.id = NEW.book_id;
+		            	RETURN NEW;
+		        	END IF;
+		        	RETURN NULL;
+		        END;
+			
+			$BODY$;
+		</createProcedure>
+		<sql>
+			CREATE TRIGGER change_count
+		    BEFORE INSERT OR UPDATE OF returned
+		    ON public.book_reader
+		    FOR EACH ROW
+		    EXECUTE PROCEDURE public.change_book_count();
+		</sql>
+		<rollback>
+		    <sql>DROP FUNCTION public.change_book_count();</sql>
+		    <sql>DROP TRIGGER change_count ON public.book_reader;</sql>
+	    </rollback>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,1052 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Наташа (generated)" id="1514044382194-1">
+        <insert tableName="author">
+            <column name="id" valueNumeric="3"/>
+            <column name="full_name" value="Власов В. С."/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1970-10-07"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Київ"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="1"/>
+            <column name="full_name" value="Тарас Григорович Шевченко"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1814-03-09"/>
+            <column name="death_date" valueDate="1861-03-10"/>
+            <column name="birth_place" value="Моринці"/>
+            <column name="death_place" value="Санкт-Петербург, Росія"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="2"/>
+            <column name="full_name" value="Леся Українка (Лариса Петрівна Косач-Квітка)"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1871-02-25"/>
+            <column name="death_date" valueDate="1913-08-01"/>
+            <column name="birth_place" value="Новгород-Волинський"/>
+            <column name="death_place" value="Сурами, Грузія"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="4"/>
+            <column name="full_name" value="Берман Георгій Миколайович"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1908-12-23"/>
+            <column name="death_date" valueDate="1949-12-30"/>
+            <column name="birth_place" value="СССР"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="13"/>
+            <column name="full_name" value="Микитенко Олександр Денисович"/>
+            <column name="email" value="Mykytenko@ukr.net"/>
+            <column name="birth_date" valueDate="1990-03-30"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Лондон"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="12"/>
+            <column name="full_name" value="Прокопенко Ірина Олексіївна"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1971-10-27"/>
+            <column name="death_date" valueDate="2013-09-25"/>
+            <column name="birth_place" value="Іванівка"/>
+            <column name="death_place" value="Київ"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="15"/>
+            <column name="full_name" value="Кривошапко П. П."/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1955-02-28"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Олександрівка"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="14"/>
+            <column name="full_name" value="Тарантіно Євгеній Дмитрович"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1994-12-09"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Миколаїв"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="7"/>
+            <column name="full_name" value="Антоненко Іван Тарасович"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1998-11-11"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Жашків"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="6"/>
+            <column name="full_name" value="Сабадаш Іван Володимирович"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1938-12-11"/>
+            <column name="death_date" valueDate="1998-11-15"/>
+            <column name="birth_place" value="Одеса"/>
+            <column name="death_place" value="Київ"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="9"/>
+            <column name="full_name" value="Павлишин Максим Олегович"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1956-07-29"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Луганськ"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="8"/>
+            <column name="full_name" value="Русий Володимир Миколайович"/>
+            <column name="email" value="Niceemail@mail.com"/>
+            <column name="birth_date" valueDate="1979-05-14"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Львів"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="11"/>
+            <column name="full_name" value="Філіпова Анастасія Дмитрівна"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1987-11-27"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Микитівка"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="10"/>
+            <column name="full_name" value="Бадьор Олександра Володимирівна"/>
+            <column name="email" value="Kitten@gmail.ru"/>
+            <column name="birth_date" valueDate="1951-02-27"/>
+            <column name="death_date"/>
+            <column name="birth_place" value="Київ"/>
+            <column name="death_place"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" valueNumeric="5"/>
+            <column name="full_name" value="Іванова Ганна Миколаївна"/>
+            <column name="email"/>
+            <column name="birth_date" valueDate="1965-04-28"/>
+            <column name="death_date" valueDate="2011-01-05"/>
+            <column name="birth_place" value="Чернігів"/>
+            <column name="death_place" value="Тбілісі"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-2">
+        <insert tableName="book">
+            <column name="id" valueNumeric="9"/>
+            <column name="title" value="Фізика загальна"/>
+            <column name="publisher_id" valueNumeric="8"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="74"/>
+            <column name="available_count" valueNumeric="70"/>
+            <column name="publish_year" valueNumeric="2016"/>
+            <column name="department_id" valueNumeric="34"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="10"/>
+            <column name="title" value="Математика 6 клас"/>
+            <column name="publisher_id" valueNumeric="2"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="31"/>
+            <column name="available_count" valueNumeric="31"/>
+            <column name="publish_year" valueNumeric="2012"/>
+            <column name="department_id" valueNumeric="41"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="11"/>
+            <column name="title" value="Теорія Систем"/>
+            <column name="publisher_id" valueNumeric="5"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="17"/>
+            <column name="available_count" valueNumeric="16"/>
+            <column name="publish_year" valueNumeric="1998"/>
+            <column name="department_id" valueNumeric="34"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="12"/>
+            <column name="title" value="Фізика квантова"/>
+            <column name="publisher_id" valueNumeric="6"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="13"/>
+            <column name="available_count" valueNumeric="11"/>
+            <column name="publish_year" valueNumeric="2017"/>
+            <column name="department_id" valueNumeric="34"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="13"/>
+            <column name="title" value="Що хочуть чоловіки?"/>
+            <column name="publisher_id" valueNumeric="7"/>
+            <column name="kind" value="methodical"/>
+            <column name="max_count" valueNumeric="15"/>
+            <column name="available_count" valueNumeric="15"/>
+            <column name="publish_year" valueNumeric="1998"/>
+            <column name="department_id" valueNumeric="38"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="14"/>
+            <column name="title" value="Як перестати бути думною?"/>
+            <column name="publisher_id" valueNumeric="4"/>
+            <column name="kind" value="methodical"/>
+            <column name="max_count" valueNumeric="16"/>
+            <column name="available_count" valueNumeric="16"/>
+            <column name="publish_year" valueNumeric="1995"/>
+            <column name="department_id" valueNumeric="38"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="17"/>
+            <column name="title" value="Гаррі Поттер"/>
+            <column name="publisher_id" valueNumeric="9"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="5"/>
+            <column name="available_count" valueNumeric="4"/>
+            <column name="publish_year" valueNumeric="1994"/>
+            <column name="department_id" valueNumeric="35"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="18"/>
+            <column name="title" value="Автобіографія Х'ю Грант"/>
+            <column name="publisher_id" valueNumeric="7"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="9"/>
+            <column name="available_count" valueNumeric="8"/>
+            <column name="publish_year" valueNumeric="2016"/>
+            <column name="department_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="20"/>
+            <column name="title" value="Скриня Пандори"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="66"/>
+            <column name="available_count" valueNumeric="55"/>
+            <column name="publish_year" valueNumeric="1911"/>
+            <column name="department_id" valueNumeric="35"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="23"/>
+            <column name="title" value="Троща"/>
+            <column name="publisher_id" valueNumeric="1"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="1"/>
+            <column name="available_count" valueNumeric="1"/>
+            <column name="publish_year" valueNumeric="1989"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="24"/>
+            <column name="title" value="Чотири після півночі"/>
+            <column name="publisher_id" valueNumeric="9"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="11"/>
+            <column name="available_count" valueNumeric="8"/>
+            <column name="publish_year" valueNumeric="1934"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="25"/>
+            <column name="title" value="Словник Лонгман"/>
+            <column name="publisher_id" valueNumeric="5"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="23"/>
+            <column name="available_count" valueNumeric="15"/>
+            <column name="publish_year" valueNumeric="1978"/>
+            <column name="department_id" valueNumeric="32"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="26"/>
+            <column name="title" value="Пікнік на галявині"/>
+            <column name="publisher_id" valueNumeric="1"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="41"/>
+            <column name="available_count" valueNumeric="40"/>
+            <column name="publish_year" valueNumeric="1998"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="28"/>
+            <column name="title" value="Інженерія"/>
+            <column name="publisher_id" valueNumeric="8"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="6"/>
+            <column name="available_count" valueNumeric="6"/>
+            <column name="publish_year" valueNumeric="2008"/>
+            <column name="department_id" valueNumeric="45"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="29"/>
+            <column name="title" value="Аномалії космосу"/>
+            <column name="publisher_id" valueNumeric="1"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="33"/>
+            <column name="available_count" valueNumeric="33"/>
+            <column name="publish_year" valueNumeric="1999"/>
+            <column name="department_id" valueNumeric="35"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="8"/>
+            <column name="title" value="Збірник задач та вправ з математичного аналізу"/>
+            <column name="publisher_id" valueNumeric="1"/>
+            <column name="kind" value="methodical"/>
+            <column name="max_count" valueNumeric="44"/>
+            <column name="available_count" valueNumeric="43"/>
+            <column name="publish_year" valueNumeric="1997"/>
+            <column name="department_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="22"/>
+            <column name="title" value="Книга Хюге"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="15"/>
+            <column name="available_count" valueNumeric="11"/>
+            <column name="publish_year" valueNumeric="1954"/>
+            <column name="department_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="2"/>
+            <column name="title" value="Кобзар"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="14"/>
+            <column name="available_count" valueNumeric="11"/>
+            <column name="publish_year" valueNumeric="1998"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="3"/>
+            <column name="title" value="Всесвітня історія"/>
+            <column name="publisher_id" valueNumeric="2"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="90"/>
+            <column name="available_count" valueNumeric="85"/>
+            <column name="publish_year" valueNumeric="2016"/>
+            <column name="department_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="15"/>
+            <column name="title" value="Соловейко"/>
+            <column name="publisher_id" valueNumeric="4"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="11"/>
+            <column name="available_count" valueNumeric="9"/>
+            <column name="publish_year" valueNumeric="1915"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="19"/>
+            <column name="title" value="Біохімія"/>
+            <column name="publisher_id" valueNumeric="9"/>
+            <column name="kind" value="educational"/>
+            <column name="max_count" valueNumeric="8"/>
+            <column name="available_count" valueNumeric="7"/>
+            <column name="publish_year" valueNumeric="2004"/>
+            <column name="department_id" valueNumeric="44"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="27"/>
+            <column name="title" value="Бібліотечний Поліцейський"/>
+            <column name="publisher_id" valueNumeric="4"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="52"/>
+            <column name="available_count" valueNumeric="51"/>
+            <column name="publish_year" valueNumeric="1999"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="21"/>
+            <column name="title" value="Як позбутися депресії?"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="methodical"/>
+            <column name="max_count" valueNumeric="1"/>
+            <column name="available_count" valueNumeric="0"/>
+            <column name="publish_year" valueNumeric="2001"/>
+            <column name="department_id" valueNumeric="38"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="16"/>
+            <column name="title" value="Поняття і потреби"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="methodical"/>
+            <column name="max_count" valueNumeric="19"/>
+            <column name="available_count" valueNumeric="17"/>
+            <column name="publish_year" valueNumeric="2005"/>
+            <column name="department_id" valueNumeric="38"/>
+        </insert>
+        <insert tableName="book">
+            <column name="id" valueNumeric="1"/>
+            <column name="title" value="На крилах пісень"/>
+            <column name="publisher_id" valueNumeric="3"/>
+            <column name="kind" value="auxiliary"/>
+            <column name="max_count" valueNumeric="7"/>
+            <column name="available_count" valueNumeric="3"/>
+            <column name="publish_year" valueNumeric="1991"/>
+            <column name="department_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-3">
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="3"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="author_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="2"/>
+            <column name="book_id" valueNumeric="8"/>
+            <column name="author_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="1"/>
+            <column name="book_id" valueNumeric="1"/>
+            <column name="author_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="4"/>
+            <column name="book_id" valueNumeric="2"/>
+            <column name="author_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="42"/>
+            <column name="book_id" valueNumeric="26"/>
+            <column name="author_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="43"/>
+            <column name="book_id" valueNumeric="24"/>
+            <column name="author_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="44"/>
+            <column name="book_id" valueNumeric="22"/>
+            <column name="author_id" valueNumeric="11"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="45"/>
+            <column name="book_id" valueNumeric="27"/>
+            <column name="author_id" valueNumeric="13"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="46"/>
+            <column name="book_id" valueNumeric="23"/>
+            <column name="author_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="47"/>
+            <column name="book_id" valueNumeric="25"/>
+            <column name="author_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="48"/>
+            <column name="book_id" valueNumeric="15"/>
+            <column name="author_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="49"/>
+            <column name="book_id" valueNumeric="11"/>
+            <column name="author_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="50"/>
+            <column name="book_id" valueNumeric="8"/>
+            <column name="author_id" valueNumeric="5"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="51"/>
+            <column name="book_id" valueNumeric="9"/>
+            <column name="author_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="52"/>
+            <column name="book_id" valueNumeric="13"/>
+            <column name="author_id" valueNumeric="15"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="53"/>
+            <column name="book_id" valueNumeric="29"/>
+            <column name="author_id" valueNumeric="11"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="54"/>
+            <column name="book_id" valueNumeric="12"/>
+            <column name="author_id" valueNumeric="12"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="55"/>
+            <column name="book_id" valueNumeric="11"/>
+            <column name="author_id" valueNumeric="14"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="56"/>
+            <column name="book_id" valueNumeric="16"/>
+            <column name="author_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="57"/>
+            <column name="book_id" valueNumeric="14"/>
+            <column name="author_id" valueNumeric="13"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="58"/>
+            <column name="book_id" valueNumeric="18"/>
+            <column name="author_id" valueNumeric="6"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="59"/>
+            <column name="book_id" valueNumeric="19"/>
+            <column name="author_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="60"/>
+            <column name="book_id" valueNumeric="21"/>
+            <column name="author_id" valueNumeric="9"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="61"/>
+            <column name="book_id" valueNumeric="17"/>
+            <column name="author_id" valueNumeric="7"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="62"/>
+            <column name="book_id" valueNumeric="28"/>
+            <column name="author_id" valueNumeric="10"/>
+        </insert>
+        <insert tableName="book_author">
+            <column name="id" valueNumeric="63"/>
+            <column name="book_id" valueNumeric="20"/>
+            <column name="author_id" valueNumeric="8"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-4">
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="1"/>
+            <column name="book_id" valueNumeric="1"/>
+            <column name="reader_id" valueNumeric="1"/>
+            <column name="taken" valueDate="2015-12-01"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="2"/>
+            <column name="book_id" valueNumeric="2"/>
+            <column name="reader_id" valueNumeric="2"/>
+            <column name="taken" valueDate="2016-02-23"/>
+            <column name="returned" valueDate="2016-03-04"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="10"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="1"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="11"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="2"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned" valueDate="2017-12-21"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="12"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="4"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="14"/>
+            <column name="book_id" valueNumeric="2"/>
+            <column name="reader_id" valueNumeric="4"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="16"/>
+            <column name="book_id" valueNumeric="1"/>
+            <column name="reader_id" valueNumeric="4"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="4"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="3"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="15"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="6"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="19"/>
+            <column name="book_id" valueNumeric="8"/>
+            <column name="reader_id" valueNumeric="5"/>
+            <column name="taken" valueDate="2017-12-22"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="18"/>
+            <column name="book_id" valueNumeric="2"/>
+            <column name="reader_id" valueNumeric="7"/>
+            <column name="taken" valueDate="2017-12-21"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="20"/>
+            <column name="book_id" valueNumeric="8"/>
+            <column name="reader_id" valueNumeric="6"/>
+            <column name="taken" valueDate="2017-12-22"/>
+            <column name="returned" valueDate="2017-12-23"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="31"/>
+            <column name="book_id" valueNumeric="22"/>
+            <column name="reader_id" valueNumeric="17"/>
+            <column name="taken" valueDate="2017-01-25"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="32"/>
+            <column name="book_id" valueNumeric="2"/>
+            <column name="reader_id" valueNumeric="5"/>
+            <column name="taken" valueDate="2017-11-12"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="33"/>
+            <column name="book_id" valueNumeric="3"/>
+            <column name="reader_id" valueNumeric="6"/>
+            <column name="taken" valueDate="2017-03-11"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="34"/>
+            <column name="book_id" valueNumeric="15"/>
+            <column name="reader_id" valueNumeric="15"/>
+            <column name="taken" valueDate="2017-10-01"/>
+            <column name="returned" valueDate="2017-10-22"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="35"/>
+            <column name="book_id" valueNumeric="19"/>
+            <column name="reader_id" valueNumeric="14"/>
+            <column name="taken" valueDate="2017-07-16"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="36"/>
+            <column name="book_id" valueNumeric="16"/>
+            <column name="reader_id" valueNumeric="11"/>
+            <column name="taken" valueDate="2017-09-19"/>
+            <column name="returned" valueDate="2017-12-01"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="37"/>
+            <column name="book_id" valueNumeric="27"/>
+            <column name="reader_id" valueNumeric="8"/>
+            <column name="taken" valueDate="2017-11-11"/>
+            <column name="returned"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="38"/>
+            <column name="book_id" valueNumeric="21"/>
+            <column name="reader_id" valueNumeric="9"/>
+            <column name="taken" valueDate="2017-04-22"/>
+            <column name="returned" valueDate="2017-05-11"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="39"/>
+            <column name="book_id" valueNumeric="16"/>
+            <column name="reader_id" valueNumeric="7"/>
+            <column name="taken" valueDate="2017-06-02"/>
+            <column name="returned" valueDate="2017-07-16"/>
+        </insert>
+        <insert tableName="book_reader">
+            <column name="id" valueNumeric="40"/>
+            <column name="book_id" valueNumeric="1"/>
+            <column name="reader_id" valueNumeric="12"/>
+            <column name="taken" valueDate="2017-09-15"/>
+            <column name="returned"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-5">
+        <insert tableName="department">
+            <column name="id" valueNumeric="2"/>
+            <column name="discipline" value="history"/>
+            <column name="hall_name" value="Переможний Зал"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="1"/>
+            <column name="discipline" value="literature"/>
+            <column name="hall_name" value="Зал Шевченка"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="3"/>
+            <column name="discipline" value="art"/>
+            <column name="hall_name" value="Творчий зал"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="5"/>
+            <column name="discipline" value="math"/>
+            <column name="hall_name" value="Зал Точності"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="29"/>
+            <column name="discipline" value="languages"/>
+            <column name="hall_name" value="Зал Драматургії"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="30"/>
+            <column name="discipline" value="languages"/>
+            <column name="hall_name" value="Зал Шевченка"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="31"/>
+            <column name="discipline" value="languages"/>
+            <column name="hall_name" value="Дитячий Зал"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="32"/>
+            <column name="discipline" value="languages"/>
+            <column name="hall_name" value="Архів"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="33"/>
+            <column name="discipline" value="music"/>
+            <column name="hall_name" value="Зал Драматургії"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="34"/>
+            <column name="discipline" value="physics"/>
+            <column name="hall_name" value="Сучасна Література"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="35"/>
+            <column name="discipline" value="philosophy"/>
+            <column name="hall_name" value="Зал Думок"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="36"/>
+            <column name="discipline" value="health care"/>
+            <column name="hall_name" value="Архів"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="37"/>
+            <column name="discipline" value="chemistry"/>
+            <column name="hall_name" value="Зал Точності"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="38"/>
+            <column name="discipline" value="phsychology"/>
+            <column name="hall_name" value="Зал Думок"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="39"/>
+            <column name="discipline" value="art"/>
+            <column name="hall_name" value="Зал Комедій"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="40"/>
+            <column name="discipline" value="economics"/>
+            <column name="hall_name" value="Зал Точності"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="41"/>
+            <column name="discipline" value="math"/>
+            <column name="hall_name" value="Архів"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="42"/>
+            <column name="discipline" value="health care"/>
+            <column name="hall_name" value="Західний Зал"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="43"/>
+            <column name="discipline" value="philosophy"/>
+            <column name="hall_name" value="Зал Думок"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="44"/>
+            <column name="discipline" value="PT"/>
+            <column name="hall_name" value="Дитячий Зал"/>
+        </insert>
+        <insert tableName="department">
+            <column name="id" valueNumeric="45"/>
+            <column name="discipline" value="IT"/>
+            <column name="hall_name" value="Сучасна Література"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-6">
+        <insert tableName="hall">
+            <column name="name" value="Творчий зал"/>
+            <column name="read_place_count" valueNumeric="6"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Шевченка"/>
+            <column name="read_place_count" valueNumeric="0"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Переможний Зал"/>
+            <column name="read_place_count" valueNumeric="0"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Святковий Зал"/>
+            <column name="read_place_count" valueNumeric="50"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Точності"/>
+            <column name="read_place_count" valueNumeric="20"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Сучасна Література"/>
+            <column name="read_place_count" valueNumeric="20"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Комедій"/>
+            <column name="read_place_count" valueNumeric="15"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Фантастичний Зал"/>
+            <column name="read_place_count" valueNumeric="10"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Драматургії"/>
+            <column name="read_place_count" valueNumeric="15"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Перемоги"/>
+            <column name="read_place_count"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Львівський Зал"/>
+            <column name="read_place_count"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Західний Зал"/>
+            <column name="read_place_count"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Дитячий Зал"/>
+            <column name="read_place_count" valueNumeric="45"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Зал Думок"/>
+            <column name="read_place_count" valueNumeric="4"/>
+        </insert>
+        <insert tableName="hall">
+            <column name="name" value="Архів"/>
+            <column name="read_place_count"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-7">
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Освіта"/>
+            <column name="email" value="osvita-dim@ukr.net"/>
+            <column name="phone_number" value="044 272-02-48"/>
+            <column name="address" value="м. Київ, вул. Обсерваторна, буд. 25"/>
+            <column name="website" value="http://www.osvita-dim.com.ua/"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Всеукраїнське спеціалізоване видавництво «Світ»"/>
+            <column name="email" value="svit_vydav@ukr.net"/>
+            <column name="phone_number" value="032 235-68-90"/>
+            <column name="address" value="Львів, вул. Галицька, 21"/>
+            <column name="website" value="http://svit.gov.ua/"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Ранок"/>
+            <column name="email" value="office@ranok.com.ua"/>
+            <column name="phone_number" value="067 560-53-83"/>
+            <column name="address" value="Харків,&#10;вул. Космічна, 21-а, 7 поверх"/>
+            <column name="website" value="http://www.ranok.com.ua/"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Астон"/>
+            <column name="email"/>
+            <column name="phone_number" value="067 354-62-95"/>
+            <column name="address" value="м. Тернопіль, вул. Гайова, 8"/>
+            <column name="website" value="https://aston.te.ua/"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Щастя"/>
+            <column name="email"/>
+            <column name="phone_number" value="047 221-15-15"/>
+            <column name="address" value="Одеса, вул. Смирного 15"/>
+            <column name="website"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="Правда"/>
+            <column name="email"/>
+            <column name="phone_number" value="095 325-50-65"/>
+            <column name="address" value="Тернопіль, вул Микитенка 15"/>
+            <column name="website"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="7"/>
+            <column name="name" value="Майбутні новини"/>
+            <column name="email"/>
+            <column name="phone_number" value="044 567-99-81"/>
+            <column name="address" value="Жашків, вул. Шевченка 95"/>
+            <column name="website"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="8"/>
+            <column name="name" value="Раннішній вісник"/>
+            <column name="email"/>
+            <column name="phone_number" value="032 321-19-01"/>
+            <column name="address" value="Київ, вул. Бондаренка 1"/>
+            <column name="website"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="9"/>
+            <column name="name" value="Заподілля"/>
+            <column name="email"/>
+            <column name="phone_number" value="017 731-21-21"/>
+            <column name="address" value="Київ, вул. Абросімчука 67"/>
+            <column name="website"/>
+        </insert>
+        <insert tableName="publisher">
+            <column name="id" valueNumeric="10"/>
+            <column name="name" value="Вікінг"/>
+            <column name="email"/>
+            <column name="phone_number" value="098 880-42-42"/>
+            <column name="address" value="Київ, вул. Щасливого 64"/>
+            <column name="website" value="http://www.viking.com.ua"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Наташа (generated)" id="1514044382194-8">
+        <insert tableName="reader">
+            <column name="id" valueNumeric="1"/>
+            <column name="full_name" value="Кирич Микола Антонович"/>
+            <column name="address" value="Сміла, вул. Гарбузова, буд. 2, кв. 18"/>
+            <column name="email"/>
+            <column name="phone_number" value="+38066 231-46-55"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="2"/>
+            <column name="full_name" value="Кузнєцов Віктор Леонідович"/>
+            <column name="address" value="Херсон, вул. Хвіртська, буд.15, кв. 3"/>
+            <column name="email"/>
+            <column name="phone_number" value="+38096 543-48-11"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="4"/>
+            <column name="full_name" value="Коломиєць Сергій Олександрович"/>
+            <column name="address" value="Київ, вул. Золотих воріт, буд. 6, кв.143"/>
+            <column name="email"/>
+            <column name="phone_number" value="098 562-62-28"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="3"/>
+            <column name="full_name" value="Міщук Володимир Сергійович"/>
+            <column name="address" value="Київ, вул. Золота, буд. 2, кв. 1"/>
+            <column name="email" value="mishukVova@gmail.com"/>
+            <column name="phone_number" value="+38044 210-00-37"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="6"/>
+            <column name="full_name" value="Морквець Петро Валерійович"/>
+            <column name="address" value="Черкаси, вул. Черкаська, буд. 6, кв. 7"/>
+            <column name="email" value="myEmail@ukr.net"/>
+            <column name="phone_number" value="+38066 586-46-16"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="5"/>
+            <column name="full_name" value="Літвінова Наталія Олександрівна"/>
+            <column name="address" value="Київ, вул. Ревуцького, буд. 5, кв. 45"/>
+            <column name="email" value="natalsha07@mail.ru"/>
+            <column name="phone_number" value="095 325-55-00"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="7"/>
+            <column name="full_name" value="Кравець Олена Федірівна"/>
+            <column name="address" value="Бровари, вул. Київська, буд.7, кв. 260"/>
+            <column name="email"/>
+            <column name="phone_number" value="099 385-35-11"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="12"/>
+            <column name="full_name" value="Мірошниченко Ярослав Андрійович"/>
+            <column name="address" value="Одеса, вул. Німецька"/>
+            <column name="email"/>
+            <column name="phone_number" value="068 691-04-79"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="11"/>
+            <column name="full_name" value="Руслан Євгенійович Крамарчук"/>
+            <column name="address" value="Донецьк, вул. Бандитів"/>
+            <column name="email"/>
+            <column name="phone_number" value="097 880-42-42"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="14"/>
+            <column name="full_name" value="Микитюк Назар Михайлович"/>
+            <column name="address" value="Суми, вул. Польська"/>
+            <column name="email"/>
+            <column name="phone_number" value="091 047-95-33"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="13"/>
+            <column name="full_name" value="Роман Борисович Таращук"/>
+            <column name="address" value="Миколаїв, вул. Кирпи"/>
+            <column name="email"/>
+            <column name="phone_number" value="034 560-64-90"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="16"/>
+            <column name="full_name" value="Назар Тарасович Середа"/>
+            <column name="address" value="Жашків, вул. Шевченка"/>
+            <column name="email"/>
+            <column name="phone_number" value="067 444-65-42"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="15"/>
+            <column name="full_name" value="Максим Сергійович Кравченко"/>
+            <column name="address" value="Київ, вул, Мирошніченка"/>
+            <column name="email"/>
+            <column name="phone_number" value="095 235-50-65"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="17"/>
+            <column name="full_name" value="Діана Борисівна Броваренко"/>
+            <column name="address" value="Київ,вул. Бальзака"/>
+            <column name="email"/>
+            <column name="phone_number" value="044 565-41-25"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="8"/>
+            <column name="full_name" value="Броваренко Анатолій Тарасович"/>
+            <column name="address" value="Тернопіль, вул. Героїв"/>
+            <column name="email"/>
+            <column name="phone_number" value="044 544-22-11"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="10"/>
+            <column name="full_name" value="Маргарита Борисівна Шевченко"/>
+            <column name="address" value="Луганськ, вул. Шахтарів"/>
+            <column name="email"/>
+            <column name="phone_number" value="095 311-67-01"/>
+        </insert>
+        <insert tableName="reader">
+            <column name="id" valueNumeric="9"/>
+            <column name="full_name" value="Пономарчук Тамара Романівна"/>
+            <column name="address" value="Львів, вул. Упа, буд. 4"/>
+            <column name="email" value="ttt6ttt@ggggg.com"/>
+            <column name="phone_number" value="054 965-23-22"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
